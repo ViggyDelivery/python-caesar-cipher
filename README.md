@@ -1,2 +1,4 @@
 # python-caesar-cipher
 A Python-based Caesar cipher encoder and decoder
+
+This Python program is capable of encoding and decoding a given text. For encoding, the user first inputs their intended text and then the shift value. The program then shifts each letter character in the input by the inputted shift amount. For decoding, the user first inputs an encoded text. The program then checks each possible shift value, 0 through 25, and shifts back each letter character accordingly. For each test, after the shift is done, I utilize Gemini 2.0 Flash to validate if the decoded output forms a valid sentence or incomprehensible letters. Using Gemini's output, the program accordingly decides to print out the shift value and the original text or simply continue on to the next test case. To get around Gemini's 15 requests per minute limit, I have the program temporarily halt for a minute about halfway through (testing shift of 13).
